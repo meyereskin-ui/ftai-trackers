@@ -20,7 +20,7 @@ import csv
 import io
 import json
 import zipfile
-from datetime import date
+from datetime import date, timedelta
 
 import requests
 
@@ -86,6 +86,12 @@ def parse_zip(blob: bytes) -> dict[str, dict[str, dict]]:
 # ---------- classification ----------
 
 BATCH_MIN = 3  # this many FT reservations by one registrant on one day looks like a fleet deal
+BATCH_MAX_AGE_DAYS = 365  # older batches are stale history, not a live deal
+# The aviation law firm CV traced the WestJet and Aug 28 reservations to.
+KNOWN_AGENTS = {"DAUGHERTY FOWLER PEREGRIN HAUGHT & JENSON", "DFPH&J"}
+# Registrants whose FT batches are not FTAI: FAA admin holds, flight schools, OEMs.
+IGNORE_REGISTRANTS = ("SBS PRGM OFC", "CANCELLED/NOT ASSIGNED", "FLORIDA TECH",
+                      "BOMBARDIER", "FLIGHT SAFETY", "FLIGHTSAFETY")
 
 
 def _registrant(rec: dict) -> str:
@@ -95,11 +101,14 @@ def _registrant(rec: dict) -> str:
 def build_ctx(snap: dict[str, dict[str, dict]], agents: set[str] | None = None) -> dict:
     """Reservation batches and known FTAI filing agents, used to classify reservations."""
     counts: dict[tuple, int] = {}
+    cutoff = (date.today() - timedelta(days=BATCH_MAX_AGE_DAYS)).strftime("%Y%m%d")
     for r in snap.get("reserved", {}).values():
+        if r.get("RSV DATE", "") < cutoff or any(x in _registrant(r) for x in IGNORE_REGISTRANTS):
+            continue
         k = (_registrant(r), r.get("RSV DATE", ""))
         counts[k] = counts.get(k, 0) + 1
     return {"batches": {k for k, c in counts.items() if c >= BATCH_MIN},
-            "agents": {a.upper() for a in (agents or set())}}
+            "agents": {a.upper() for a in (agents or set()) | KNOWN_AGENTS}}
 
 
 def likely_ftai(rec: dict, ctx: dict | None = None) -> bool:

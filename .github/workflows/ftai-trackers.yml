@@ -1,7 +1,7 @@
 name: FTAI trackers
+# Daily runs are done by a Claude scheduled task. This workflow is a manual fallback
+# (Actions tab -> Run workflow); add a schedule here only if you stop the Claude task.
 on:
-  schedule:
-    - cron: "17 11 * * *"   # daily 11:17 UTC (7:17am Eastern); FAA posts the file overnight
   workflow_dispatch: {}
 permissions:
   contents: write
