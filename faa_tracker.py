@@ -229,6 +229,11 @@ def cmd_run(args) -> None:
     con = connect()
     prev_date, prev = load_snapshot(con, before=snap_date)
     save_snapshot(con, snap_date, cur)
+    # Only the latest snapshot is needed for diffs; keep two weeks for reference.
+    con.execute("""DELETE FROM faa_snapshot WHERE snap_date NOT IN
+                   (SELECT DISTINCT snap_date FROM faa_snapshot ORDER BY snap_date DESC LIMIT 14)""")
+    con.commit()
+    con.execute("VACUUM")
     counts = {s: len(v) for s, v in cur.items()}
     print(f"[faa] snapshot {snap_date}: {counts}")
     if prev_date is None:
