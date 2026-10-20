@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import re
 import io
 import json
 import zipfile
@@ -55,19 +56,32 @@ def owner_class(name: str) -> str:
     return "other"
 
 
+NG_CEO = re.compile(r"^(737-[6789][0-9A-Z]{2}(ER)?|A3(19|20|21)-[12][0-9A-Z]{2})$")
+
+
+def blank_engine_cfm56(model: str) -> bool:
+    """737NG / A320ceo airframes; MAX (737-8) and neo (A320-251N) don't match."""
+    return bool(NG_CEO.match(model.split(" ", 1)[-1].replace("AIRBUS ", "").strip()))
+
+
 def load(blob: bytes) -> tuple[dict, list[dict]]:
     z = zipfile.ZipFile(io.BytesIO(blob))
     eng = {r["CODE"] for r in _rows(z, "ENGINE.txt") if "CFM56" in r.get("MODEL", "").upper()}
     models = {r["CODE"]: f"{r.get('MFR', '')} {r.get('MODEL', '')}".strip() for r in _rows(z, "ACFTREF.txt")}
+    raw_model = {r["CODE"]: r.get("MODEL", "").strip() for r in _rows(z, "ACFTREF.txt")}
+    # Engine field is often blank on newly registered airliners (FTAI's own UMB jets included),
+    # so a blank engine on a 737NG/A320ceo airframe counts as CFM56.
+    is_cfm = lambda r: r.get("ENG MFR MDL") in eng or (
+        not r.get("ENG MFR MDL") and bool(NG_CEO.match(raw_model.get(r.get("MFR MDL CODE", ""), ""))))
     fleet = {}
     for r in _rows(z, "MASTER.txt"):
-        if r.get("ENG MFR MDL") in eng:
+        if is_cfm(r):
             fleet[r["N NUMBER"]] = {"owner": r.get("NAME", ""), "serial": r.get("SERIAL NUMBER", ""),
                                     "model": models.get(r.get("MFR MDL CODE", ""), "?"),
                                     "status": r.get("STATUS CODE", "")}
     dereg = [{"n": r["N NUMBER"], "cancel": r.get("CANCEL DATE", ""), "export": r.get("EXP COUNTRY", ""),
               "owner": r.get("NAME", ""), "model": models.get(r.get("MFR MDL CODE", ""), "?")}
-             for r in _rows(z, "DEREG.txt") if r.get("ENG MFR MDL") in eng]
+             for r in _rows(z, "DEREG.txt") if is_cfm(r)]
     return fleet, dereg
 
 
