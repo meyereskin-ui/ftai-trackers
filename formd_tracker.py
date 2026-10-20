@@ -28,8 +28,11 @@ OWN = ("FTAI AVIATION LTD", "FTAI INFRASTRUCTURE")
 
 
 def _get(s: requests.Session, url: str, **params) -> str:
-    time.sleep(0.15)
-    r = s.get(url, params=params or None, timeout=60)
+    for attempt in range(5):  # SEC returns 429/503 when throttling; back off and retry
+        time.sleep(0.3 + attempt * 5)
+        r = s.get(url, params=params or None, timeout=60)
+        if r.status_code not in (429, 500, 502, 503):
+            break
     r.raise_for_status()
     return r.text
 

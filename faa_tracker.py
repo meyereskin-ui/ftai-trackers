@@ -24,7 +24,7 @@ from datetime import date, timedelta
 
 import requests
 
-from common import BROWSER_UA, connect, record_alerts
+from common import BROWSER_UA, DB_PATH, connect, record_alerts
 
 URL = "https://registry.faa.gov/database/ReleasableAircraft.zip"
 SUFFIX = "FT"
@@ -214,9 +214,17 @@ def save_snapshot(con, snap_date: str, snap: dict[str, dict[str, dict]]) -> None
     con.commit()
 
 
+CACHE = DB_PATH.parent / "cache" / "ReleasableAircraft.zip"
+
+
 def download() -> bytes:
+    """Today's registry file; cached so fleet_tracker.py reuses the same download."""
+    if CACHE.exists() and date.fromtimestamp(CACHE.stat().st_mtime) == date.today():
+        return CACHE.read_bytes()
     r = requests.get(URL, headers={"User-Agent": BROWSER_UA}, timeout=300)
     r.raise_for_status()
+    CACHE.parent.mkdir(parents=True, exist_ok=True)
+    CACHE.write_bytes(r.content)
     return r.content
 
 
