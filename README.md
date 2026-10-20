@@ -1,11 +1,13 @@
 # FTAI trackers
 
-Two daily monitors for public data that has led FTAI's own disclosures.
+Daily monitors for public data that has led FTAI's own disclosures. `run_daily.sh` runs all four.
 
 | Tracker | Source | What it alerts on |
 | --- | --- | --- |
 | `faa_tracker.py` | FAA ReleasableAircraft.zip (free, updated nightly) | Any change to N-numbers ending in **FT**: new reservations, new registrations, deregistrations, owner/status changes |
-| `edgar_tracker.py` | SEC full-text search (efts.sec.gov) | New filings by *other* companies mentioning FTAI, FTAI Power, the Strategic Capital fund or J&F Power |
+| `edgar_tracker.py` | SEC full-text search (efts.sec.gov) | New filings by *other* companies mentioning FTAI, FTAI Power, the aircraft fund or J&F Power; mutual funds' marks on aircraft-fund loans and stakes (N-PORT) |
+| `formd_tracker.py` | EDGAR company list + Form D filings | New FTAI-named entities (e.g. a new fund vintage); Form D / D/A filings by fund vehicles with amount sold, investor count, placement agent |
+| `eia_tracker.py` | EIA-860M monthly generator inventory | New or newly operating 20-32 MW gas turbines (FTAI Power's size), flagged when clustered or owned by data-center-sounding entities. Misses off-grid sites |
 
 Alerts go to the terminal, `data/alerts.md`, a SQLite DB (`data/ftai.db`) and, optionally, email.
 🔴 = likely FTAI, ⚪ = probably noise (e.g. a Cessna that happens to end in FT).
@@ -23,7 +25,7 @@ Reservations are the earliest signal (before registration, before the press rele
 ## Setup
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt   # requests, openpyxl
 export FTAI_UA="Meyer Eskin your-email@example.com"   # SEC requires a contact User-Agent
 
 python faa_tracker.py run          # first run stores the baseline (~60 MB download)
@@ -47,3 +49,9 @@ Email via Gmail: `SMTP_HOST=smtp.gmail.com`, `SMTP_USER` = your address, `SMTP_P
 - Public data only, and nothing from work or deal teams goes in.
 
 `python tests/replay_test.py` replays CV's Aug–Sep 2026 WestJet sequence with synthetic files in the FAA's format and checks every alert type.
+
+## Not automated (yet)
+
+- **EPA RBLC** moved to `cdxoarapps.epa.gov`; allow that domain and it can be added.
+- **FAA PMA approvals** need a free DRS API key (DRS Help & Training → DRS API).
+- **Irish CRO accounts** for FTAI Aircraft Leasing Ireland (2025) DAC: paid per document and blocks bots; buy the annual accounts by hand once a year.

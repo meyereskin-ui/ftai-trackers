@@ -99,3 +99,14 @@
 - **PX14A6G mention** ⚪ WILLIS LEASE FINANCE CORP; Four Tree Island Advisory LLC · PX14A6G filed 2026-05-18 · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/1018164/000092189526001429/px14a6g14680002_05182026.htm)
 - **PX14A6G mention** ⚪ WILLIS LEASE FINANCE CORP; Four Tree Island Advisory LLC · PX14A6G filed 2026-06-01 · matched "FTAI" -"FTAI Infrastructure" · [document](https://www.sec.gov/Archives/edgar/data/1018164/000092189526001511/px14a6g14680002_06012026.htm)
 - **11-K mention** ⚪ Walmart Inc. · 11-K filed 2026-07-16 (11-K) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/104169/000010416926000136/wmt-20260716.htm)
+
+## 2026-10-20T21:41:59Z · formd · 8 alert(s)
+
+- **FORM D** ⚪ FTAI Aircraft Leasing Offshore OIM SPV L.P. · D filed 2025-12-22 · sold $0 of Indefinite · 0 investors · first sale yet to occur · [filing](https://www.sec.gov/Archives/edgar/data/2069580/000206958025000001/primary_doc.xml)
+- **FORM D** ⚪ FTAI AIRCRAFT LEASING OFFSHORE SPV (2025) L.P. · D filed 2025-03-25 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2048726/000204872625000001/primary_doc.xml)
+- **FORM D** ⚪ FTAI AIRCRAFT LEASING OFFSHORE SPV (2025) L.P. · D filed 2024-12-30 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2048726/000204863024000002/primary_doc.xml)
+- **FORM D** ⚪ FTAI Aircraft Leasing Offshore SPV (2026) L.P. · D filed 2026-06-23 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2136824/000213682426000002/primary_doc.xml)
+- **FORM D** ⚪ FTAI AIRCRAFT LEASING SPV (2025) LP · D filed 2025-03-25 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2048630/000204863025000001/primary_doc.xml)
+- **FORM D** ⚪ FTAI AIRCRAFT LEASING SPV (2025) LP · D filed 2024-12-30 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2048630/000204863024000001/primary_doc.xml)
+- **FORM D** ⚪ FTAI Aircraft Leasing SPV (2026) LP · D filed 2026-06-23 · sold $0 of Indefinite · 0 investors · first sale yet to occur · agent LINCOLN INTERNATIONAL LLC · [filing](https://www.sec.gov/Archives/edgar/data/2136819/000213681926000002/primary_doc.xml)
+- **FORM D** 🔴 FTAI ENERGY PARTNERS LLC · D filed 2014-09-09 · sold $191,032,746 of Indefinite · 25 investors · first sale None · [filing](https://www.sec.gov/Archives/edgar/data/1618462/000095017214000064/primary_doc.xml)

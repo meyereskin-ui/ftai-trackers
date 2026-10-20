@@ -21,8 +21,7 @@ jobs:
           SMTP_PASS: ${{ secrets.SMTP_PASS }}
           ALERT_TO: ${{ secrets.ALERT_TO }}
         run: |
-          python faa_tracker.py run || echo "::warning::FAA download failed"
-          python edgar_tracker.py run --days 7
+          ./run_daily.sh
       - name: Save snapshot database and alert log
         run: |
           git config user.name "ftai-tracker"
