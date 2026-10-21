@@ -64,3 +64,7 @@ Note: UMB Bank is a common trustee, so "FTAI/UMB trust" counts in the fleet trac
 - **EPA RBLC** moved to `cdxoarapps.epa.gov`; allow that domain and it can be added.
 - **FAA PMA approvals** need a free DRS API key (DRS Help & Training → DRS API).
 - **Irish CRO accounts** for FTAI Aircraft Leasing Ireland (2025) DAC: paid per document and blocks bots; buy the annual accounts by hand once a year.
+
+## Dashboard
+
+`python3 dashboard_export.py` turns `data/ftai.db` into derived numbers (tail pipeline, warehouse draw %, fund marks, insider dollars, fleet mix, power clusters, alert feed) in `data/dashboard/`. It only reads the trackers' tables. The daily Claude run writes `latest.json` and that day's `history-<date>.json` into the FTAI Signal Board artifact's database (docs `dash/latest` and `history/<date>`), which the board renders live.
