@@ -136,3 +136,8 @@
 ## 2026-10-20T21:58:30Z · leadtime · 1 alert(s)
 
 - **LEAD TIME** 🔴 2026-09-28 FTAI acquires 10 retired WestJet 737-700s (per CV Research): registry led by 10 days (batch of 4 from 2026-09-18: N757FT, N759FT, N761FT, N336FT)
+
+## 2026-10-21T11:17:57Z · fleet · 2 alert(s)
+
+- **CFM56 EXIT** ⚪ N320FR AIRBUS S A S A320-214 s/n 02937 (TVPX AIRCRAFT SOLUTIONS INC TRUSTEE) exported to Kyrgyzstan
+- **CFM56 TRANSFER** ⚪ N357DC AIRBUS S A S A320-214 s/n 3896:  (other) → AWAS 3896 TRUST (lessor trust)
