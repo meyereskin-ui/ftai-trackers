@@ -145,3 +145,17 @@
 ## 2026-10-22T11:17:36Z · faa · 1 alert(s)
 
 - **CHANGED (registered)** ⚪ N49FT · FULLER MARCUS (CHATTANOOGA, TN) · EAA BIPLANE P · s/n 4549 · cert 20261021 · last action 20261021 · NAME: 'REGISTRATION PENDING' → 'FULLER MARCUS'; STATUS CODE: 'R' → 'V'
+
+## 2026-10-23T11:22:08Z · faa · 2 alert(s)
+
+- **DEREGISTERED** 🔴 N234FT · UMB BANK NA TRUSTEE · AIRBUS A320-200 · s/n 2034 · cert 20261002 · cancelled 20261022
+- **NEW RESERVATION** ⚪ N234FT · CANCELLED/NOT ASSIGNED · reserved 20261022
+
+## 2026-10-23T11:22:20Z · fleet · 2 alert(s)
+
+- **CFM56 EXIT** ⚪ N279AD BOEING 737-4Q8 s/n 26279 (CSDS ASSET MANAGEMENT LLC) exported to Ecuador
+- **CFM56 EXIT** 🔴 N234FT AIRBUS A320-200 s/n 2034 (UMB BANK NA TRUSTEE) exported to Lithuania
+
+## 2026-10-23T11:22:23Z · edgar · 1 alert(s)
+
+- **487 mention** ⚪ FT 13294 · 487 filed 2026-10-22 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2147128/000144554626007823/s487.htm)
