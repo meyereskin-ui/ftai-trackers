@@ -159,3 +159,8 @@
 ## 2026-10-23T11:22:23Z · edgar · 1 alert(s)
 
 - **487 mention** ⚪ FT 13294 · 487 filed 2026-10-22 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2147128/000144554626007823/s487.htm)
+
+## 2026-10-26T11:16:54Z · faa · 2 alert(s)
+
+- **CHANGED (registered)** ⚪ N88FT · EPIC AIRCRAFT LLC (BEND, OR) · EPIC AIRCRAFT LLC E1000 · s/n K135 · cert 20261023 · last action 20261023 · NAME: 'BRUNSON RICK' → 'EPIC AIRCRAFT LLC'; SERIAL NUMBER: 'K044' → 'K135'
+- **NEW REGISTRATION** ⚪ N48FT · BRUNSON RICK (NEW BRAUNFELS, TX) · EPIC AIRCRAFT LLC E1000 · s/n K044 · cert 20240731 · last action 20261023 (was reserved by BRUNSON RICK)
