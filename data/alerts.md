@@ -177,3 +177,7 @@
 ## 2026-10-30T11:18:36Z · edgar · 1 alert(s)
 
 - **FUND MARK** 🔴 GUGGENHEIM FUNDS TRUST · N-PORT filed 2026-10-29 · FTAI AIRCRAFT LEASING DDTL FUNDED: bal 112,680 PA → value $112,684, 100.0% of par; FTAI AIRCRAFT LEASING DDTL UNF: bal 105,166 PA → value $0 · [filing](https://www.sec.gov/Archives/edgar/data/88525/000094040026041774/primary_doc.xml)
+
+## 2026-11-02T12:26:35Z · fleet · 1 alert(s)
+
+- **CFM56 MONTHLY** ⚪ 2026-10: 11 CFM56 aircraft left the US register (12-month avg 8.2); transfers: lessor trust 2
