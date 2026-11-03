@@ -181,3 +181,8 @@
 ## 2026-11-02T12:26:35Z · fleet · 1 alert(s)
 
 - **CFM56 MONTHLY** ⚪ 2026-10: 11 CFM56 aircraft left the US register (12-month avg 8.2); transfers: lessor trust 2
+
+## 2026-11-03T12:18:28Z · faa · 2 alert(s)
+
+- **CHANGED (reserved)** ⚪ N555FT · NNUMBERSFORSALE.COM (TEQUESTA, FL) · reserved 20241003 · EXP DATE: '20260803' → '20270803'
+- **RESERVATION LAPSED** ⚪ N52FT · THE DAVIATOR LLC (HOMER, AK) · reserved 20240814
