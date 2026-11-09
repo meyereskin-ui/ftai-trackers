@@ -190,3 +190,13 @@
 ## 2026-11-05T12:17:38Z · fleet · 1 alert(s)
 
 - **CFM56 IMPORT** 🔴 N60491 BOEING 737-800 s/n 60491 registered to UMB BANK NA TRUSTEE
+
+## 2026-11-09T12:22:54Z · fleet · 3 alert(s)
+
+- **CFM56 EXIT** ⚪ N30716 BOEING 737-8Q8 s/n 30716 (BANK OF UTAH TRUSTEE) exported to China Peoples Rep
+- **CFM56 TRANSFER** ⚪ N8118K BOEING 737-838 s/n 33722:  (other) → TVPX TRUST CO LLC TRUSTEE (lessor trust)
+- **CFM56 IMPORT** 🔴 N305GT BOEING 737-4H6 s/n 27674 registered to UMB BANK NA TRUSTEE
+
+## 2026-11-09T12:22:55Z · edgar · 1 alert(s)
+
+- **N-MFP3 mention** ⚪ STATE STREET INSTITUTIONAL INVESTMENT TRUST · N-MFP3 filed 2026-11-06 · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/1107414/000141036826111016/primary_doc.xml)
