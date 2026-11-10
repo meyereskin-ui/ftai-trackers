@@ -200,3 +200,11 @@
 ## 2026-11-09T12:22:55Z · edgar · 1 alert(s)
 
 - **N-MFP3 mention** ⚪ STATE STREET INSTITUTIONAL INVESTMENT TRUST · N-MFP3 filed 2026-11-06 · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/1107414/000141036826111016/primary_doc.xml)
+
+## 2026-11-10T12:20:41Z · faa · 1 alert(s)
+
+- **CHANGED (reserved)** ⚪ N28FT · RICHARDSON AVIATION (FORT WORTH, TX) · reserved 20171229 · EXP DATE: '20261029' → '20271029'
+
+## 2026-11-10T12:20:51Z · fleet · 1 alert(s)
+
+- **CFM56 EXIT** ⚪ N224NV AIRBUS INDUSTRIE A320-214 s/n 1694 (SUNRISE ASSET MANAGEMENT LLC) deregistered
