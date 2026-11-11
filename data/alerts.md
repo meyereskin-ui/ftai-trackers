@@ -208,3 +208,7 @@
 ## 2026-11-10T12:20:51Z · fleet · 1 alert(s)
 
 - **CFM56 EXIT** ⚪ N224NV AIRBUS INDUSTRIE A320-214 s/n 1694 (SUNRISE ASSET MANAGEMENT LLC) deregistered
+
+## 2026-11-11T12:19:38Z · edgar · 1 alert(s)
+
+- **487 mention** ⚪ FT 13346 · 487 filed 2026-11-10 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2151866/000144554626008600/s487.htm)
