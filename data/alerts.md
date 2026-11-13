@@ -212,3 +212,11 @@
 ## 2026-11-11T12:19:38Z · edgar · 1 alert(s)
 
 - **487 mention** ⚪ FT 13346 · 487 filed 2026-11-10 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2151866/000144554626008600/s487.htm)
+
+## 2026-11-13T12:18:10Z · faa · 1 alert(s)
+
+- **NEW REGISTRATION** ⚪ N682FT · TDG AG SPRAY SOLUTIONS INC (WINFRED, SD) · DJI AGRAS T100 · s/n 1581F8ZLC25AT002PSP0 · cert 20261112 · last action 20261112
+
+## 2026-11-13T12:18:27Z · edgar · 1 alert(s)
+
+- **487 mention** ⚪ FT 13347 · 487 filed 2026-11-12 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2151868/000144554626008631/s487.htm)
