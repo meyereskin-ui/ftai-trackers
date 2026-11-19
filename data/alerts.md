@@ -220,3 +220,8 @@
 ## 2026-11-13T12:18:27Z · edgar · 1 alert(s)
 
 - **487 mention** ⚪ FT 13347 · 487 filed 2026-11-12 (FORM S-6 TO EFFECTIVE AMENDMENT) · matched "FTAI Aviation" · [document](https://www.sec.gov/Archives/edgar/data/2151868/000144554626008631/s487.htm)
+
+## 2026-11-19T12:17:00Z · fleet · 2 alert(s)
+
+- **CFM56 EXIT** ⚪ N321US AIRBUS INDUSTRIE A320-211 s/n 262 (DELTA AIR LINES INC) deregistered
+- **CFM56 EXIT** ⚪ N333NW AIRBUS INDUSTRIE A320-211 s/n 329 (DELTA AIR LINES INC) deregistered
