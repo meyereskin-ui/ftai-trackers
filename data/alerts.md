@@ -225,3 +225,7 @@
 
 - **CFM56 EXIT** ⚪ N321US AIRBUS INDUSTRIE A320-211 s/n 262 (DELTA AIR LINES INC) deregistered
 - **CFM56 EXIT** ⚪ N333NW AIRBUS INDUSTRIE A320-211 s/n 329 (DELTA AIR LINES INC) deregistered
+
+## 2026-11-20T12:18:24Z · insider · 1 alert(s)
+
+- **FORM 4** ⚪ Goodwin Paul R, Director · gift 3,000 sh on 2026-11-18 · holds 80,083 after · [filing](https://www.sec.gov/Archives/edgar/data/1590364/000159036426000094/)
